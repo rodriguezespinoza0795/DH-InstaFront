@@ -14,8 +14,15 @@ header {
   display: flex;
   padding: 10px 20px;
   justify-content: space-between;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #e0e0e0;
   align-items: center;
+}
+header input {
+  display: none;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  width: 300px;
 }
 
 main {
@@ -23,60 +30,94 @@ main {
   flex-direction: column;
   gap: 20px;
   padding: 20px;
+  align-items: center;
 }
-main .friends {
+main .first-section {
   display: flex;
-  border: 1px solid gray;
+  flex-direction: column;
+  gap: 20px;
+}
+main .first-section .friends {
+  display: flex;
+  border: 1px solid #e0e0e0;
   border-radius: 5px;
   justify-content: space-around;
   padding: 15px;
+  max-width: 400px;
+  width: 100%;
 }
-main .friends img {
+main .first-section .friends img {
   padding: 5px;
 }
-main .post {
-  border: 1px solid gray;
+main .first-section .post {
+  border: 1px solid #e0e0e0;
   border-radius: 5px;
+  max-width: 400px;
+  width: 100%;
 }
-main .post .post--header {
+main .first-section .post .post--header {
   display: flex;
   padding: 15px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #e0e0e0;
   align-items: center;
   justify-content: space-between;
 }
-main .post .post--header .post--header--profile {
+main .first-section .post .post--header .post--header--profile {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 5px;
 }
-main .post .post--header strong {
+main .first-section .post .post--header strong {
   font-size: 1.5rem;
 }
-main .post .post--photo {
+main .first-section .post .post--photo {
   padding: 15px;
 }
-main .post .post--photo img {
+main .first-section .post .post--photo img {
   width: 100%;
 }
-main .post .post--icons {
+main .first-section .post .post--icons {
   display: flex;
   gap: 10px;
   padding: 0px 15px;
 }
-main .post .post--description {
+main .first-section .post .post--description {
   display: flex;
   flex-direction: column;
   padding: 15px;
   gap: 15px;
 }
-main .post .post--description p {
+main .first-section .post .post--description p {
   font-size: 0.8rem;
 }
-main .post .post--description a {
+main .first-section .post .post--description a {
   text-decoration: none;
   color: gainsboro;
+}
+main .second-section {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  width: 250px;
+}
+main .second-section .recomendations-item,
+main .second-section .my-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+main .second-section .recomendations-item .profile,
+main .second-section .my-profile .profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+main .second-section .recomendations-item a,
+main .second-section .my-profile a {
+  text-decoration: none;
+  color: #1CA0F6;
 }
 
 footer {
@@ -84,4 +125,18 @@ footer {
   background-color: black;
   text-align: center;
   padding: 5px;
+}
+
+@media (min-width: 600px) {
+  header input {
+    display: block;
+  }
+  main {
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+  main .second-section {
+    display: flex;
+  }
 }/*# sourceMappingURL=styles.css.map */
