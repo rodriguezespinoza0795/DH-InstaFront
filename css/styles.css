@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: max-content 1fr min-content;
+}
+
+header {
+  display: flex;
+  padding: 10px 20px;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+main .friends {
+  display: flex;
+  border: 1px solid gray;
+  border-radius: 5px;
+  justify-content: space-around;
+  padding: 15px;
+}
+main .friends img {
+  padding: 5px;
+}
+main .post {
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+main .post .post--header {
+  display: flex;
+  padding: 15px;
+  border-bottom: 1px solid gray;
+  align-items: center;
+  justify-content: space-between;
+}
+main .post .post--header .post--header--profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+main .post .post--header strong {
+  font-size: 1.5rem;
+}
+main .post .post--photo {
+  padding: 15px;
+}
+main .post .post--photo img {
+  width: 100%;
+}
+main .post .post--icons {
+  display: flex;
+  gap: 10px;
+  padding: 0px 15px;
+}
+main .post .post--description {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 15px;
+}
+main .post .post--description p {
+  font-size: 0.8rem;
+}
+main .post .post--description a {
+  text-decoration: none;
+  color: gainsboro;
+}
+
+footer {
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding: 5px;
+}/*# sourceMappingURL=styles.css.map */
